@@ -1,0 +1,10 @@
+{% extends "todo/base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="" method="POST">
+  {{form|crispy}}
+  {% csrf_token %}
+  <input class="btn btn-outline-info" type="submit" value="Register">
+</form>
+{% endblock content %}
