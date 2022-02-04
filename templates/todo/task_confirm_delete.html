@@ -1,0 +1,11 @@
+{% extends "todo/base.html" %}
+
+
+{% block content %}
+<form action="" method="POST">
+  {{form.as_p}}
+  {% csrf_token %}
+<h3> Do really want to delete this "{{task.title}}" </h3>
+<input class="btn btn-outline-info" type="submit" value="Delete">
+</form>
+{% endblock content %} %}
